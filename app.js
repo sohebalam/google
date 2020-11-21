@@ -1,9 +1,9 @@
 import express from "express"
 import cookieSession from "cookie-session"
 import passport from "passport"
-import authRoutes from "./routes/auth-routes.mjs"
-import profileRoutes from "./routes/profile-routes.mjs"
-import passportSetup from "./config/passport-setup.mjs"
+import authRoutes from "./routes/auth-routes.js"
+import profileRoutes from "./routes/profile-routes.js"
+import passportSetup from "./config/passport-setup.js"
 import mongoose from "mongoose"
 // import keys from "./config/keys"
 

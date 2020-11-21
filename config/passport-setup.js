@@ -1,7 +1,7 @@
 import passport from "passport"
 import { Strategy as GoogleStrategy } from "passport-google-oauth20"
 // import keys from "./keys"
-import User from "../models/user-model.mjs"
+import User from "../models/user-model.js"
 
 passport.serializeUser((user, done) => {
   done(null, user.id)
