@@ -1,7 +1,8 @@
-const express = require("express");
-const morgan = require("morgan");
-const bodyParser = require("body-parser");
-const mongoose = require("mongoose");
+import express from "express";
+import morgan from "morgan";
+import bodyParser from "body-parser";
+import mongoose from "mongoose";
+import userRouter from "./routes/userRoute.js";
 
 mongoose.Promise = global.Promise;
 if (process.env.NODE_ENV === "test") {
@@ -20,6 +21,6 @@ if (!process.env.NODE_ENV === "test") {
 app.use(bodyParser.json());
 
 // Routes
-app.use("/users", require("./routes/users"));
+app.use("/users", userRouter);
 
-module.exports = app;
+export default app;
